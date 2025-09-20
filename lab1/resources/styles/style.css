@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles - Updated color palette */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #2d3748;
+    background-color: #f8fafc;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles - Clean white with subtle shadow */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 20px rgba(74, 85, 104, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+/* Logo Image Styling */
+.logo-placeholder img {
+    width: 200px;
+    height: 40px;
+    border-radius: 6px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Portfolio Project Images */
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #e2e8f0;
+    transition: transform 0.3s ease;
+}
+
+.project:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.team-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a202c;
+    margin-left: 12px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #667eea;
+}
+
+/* Hero Section - gradient */
+.hero {
+    padding: 4rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.slogan {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(245, 87, 108, 0.4);
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 4rem 0;
+    background-color: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1a202c;
+    position: relative;
+    font-size: 2.2rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(74, 85, 104, 0.1);
+    transition: all 0.3s;
+    border: 1px solid #e2e8f0;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(74, 85, 104, 0.15);
+}
+
+.project-image {
+    height: 200px;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a0aec0;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1a202c;
+    font-weight: 600;
+}
+
+.project-info p {
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.member {
+    text-align: center;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(74, 85, 104, 0.1);
+    transition: transform 0.3s;
+    border: 1px solid #e2e8f0;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(74, 85, 104, 0.15);
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 3px solid #e2e8f0;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1a202c;
+    font-weight: 600;
+}
+
+.member .title {
+    color: #667eea;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.member-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.member-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    color: #e2e8f0;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer .fn.org {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+footer .email a,
+footer .url a {
+    color: #667eea;
+}
+
+footer .email a:hover,
+footer .url a:hover {
+    color: #f093fb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .slogan {
+        font-size: 1.5rem;
+    }
+}
+
+/* Basic hCard styling to maintain visual consistency */
+.vcard {
+    margin: 10px 0;
+}
+
+.vcard .fn {
+    font-weight: bold;
+    color: #1a202c;
+}
+
+.vcard .title {
+    font-style: italic;
+    color: #667eea;
+}
+
+.vcard .adr {
+    margin: 5px 0;
+    color: #4a5568;
+}
+
+.vcard .email a,
+.vcard .url a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.vcard .email a:hover,
+.vcard .url a:hover {
+    text-decoration: underline;
+    color: #f093fb;
+}
+
+/* Portfolio-specific styles */
+.portfolio-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    color: white;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 5px solid white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.contact-info {
+    margin: 20px 0;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    margin: 40px 0;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+    color: #333;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.experience-item,
+.education-item,
+.project-item {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-left: 4px solid #667eea;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.experience-item h3,
+.education-item h3,
+.project-item h3 {
+    color: #667eea;
+    margin-bottom: 5px;
+}
+
+.date-range {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skill-category {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.skill-category h4 {
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.skill-list li:last-child {
+    border-bottom: none;
+}
+
+/* hCard specific styling */
+.vcard {
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Headshot styling */
+.profile-photo.headshot {
+  width: 140px;          /* smaller container */
+  height: 180px;         /* taller for headshot aspect */
+  border-radius: 8px;    /* slight rounding instead of full circle */
+  overflow: hidden;
+  margin: 1rem auto;     /* center on small screens */
+  border: 3px solid #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.profile-photo.headshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* keep proportions, crop overflow */
+  object-position: top;  /* focus on top part of headshot */
+}
+
+/* Force white text inside the profile header */
+.white-profile,
+.white-profile h1,
+.white-profile .title,
+.white-profile .adr,
+.white-profile .tel,
+.white-profile .email,
+.white-profile .contact-info a,
+.white-profile strong {
+  color: #fff !important;
+}
+
+/* Make links white + underline on hover */
+.white-profile .contact-info a {
+  text-decoration: none;
+}
+.white-profile .contact-info a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        padding: 10px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+        font-size: 36px;
+    }
+}
