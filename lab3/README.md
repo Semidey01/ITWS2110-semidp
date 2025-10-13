@@ -2,15 +2,7 @@
 
 ## Project Description:
 
-A dynamic web application that displays real-time weather information and country data for Troy, NY, with support for geolocation-based weather updates. This project demonstrates the integration of multiple REST APIs using AJAX techniques to create an interactive, data-driven web experience with visual feedback through dynamic color-changing temperature displays. The application uses asynchronous JavaScript to fetch and display data without requiring page refreshes.
-
-## Features:
-
-- **Real-time Weather Data**: Current temperature, weather conditions, humidity, wind speed, and atmospheric pressure
-- **Dynamic Temperature Colors**: Temperature display changes color based on the current temperature
-- **Country Information**: Flag, population, capital, region, languages, and currency
-- **Geolocation Support**: Get weather data for your current location with one click
-- **Responsive Design**: Adapts to different screen sizes for optimal viewing on any device
+A dynamic web application that displays real-time weather information and country data for Troy, NY, with support for geolocation-based weather updates. This lab demonstrates the integration of multiple REST APIs using AJAX techniques to create an interactive, data-driven web experience. The application uses asynchronous JavaScript to fetch and display data without requiring page refreshes.
 
 ## APIs Used:
 
@@ -68,7 +60,7 @@ The application includes a visual temperature indicator that changes the color o
 - **81-90°F**: Orange (#ffa94d) - Hot
 - **91+°F**: Red (#ff6b6b) - Very Hot
 
-The color transition is smooth (0.5s ease) and updates automatically whenever the temperature data is refreshed.
+The color updates automatically whenever the temperature data is refreshed.
 
 ## Geolocation Feature:
 
