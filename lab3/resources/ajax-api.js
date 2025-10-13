@@ -53,15 +53,47 @@ async function loadWeatherData(location) {
 }
 
 function displayWeatherData(data) {
-    document.getElementById('current-temp').textContent = Math.round(data.main.temp);
+    const temp = Math.round(data.main.temp);
+    document.getElementById('current-temp').textContent = temp;
     document.getElementById('weather-desc').textContent = data.weather[0].description;
     document.getElementById('feels-like').textContent = `${Math.round(data.main.feels_like)}°F`;
     document.getElementById('humidity').textContent = `${data.main.humidity}%`;
     document.getElementById('wind-speed').textContent = `${Math.round(data.wind.speed)} mph`;
     document.getElementById('pressure').textContent = `${data.main.pressure} hPa`;
     
+    // Update temperature color based on value
+    updateTemperatureColor(temp);
+    
     weatherLoading.style.display = 'none';
-    weatherContent.style.display = 'block';
+    weatherContent.style.display = 'flex';
+}
+
+// Temperature Color Function
+function updateTemperatureColor(temp) {
+    const tempElement = document.querySelector('.temperature');
+    
+    // Remove all existing temperature color classes
+    tempElement.classList.remove(
+        'temp-freezing', 'temp-cold', 'temp-cool', 
+        'temp-mild', 'temp-warm', 'temp-hot', 'temp-very-hot'
+    );
+    
+    // Add appropriate color class based on temperature
+    if (temp <= 20) {
+        tempElement.classList.add('temp-freezing');
+    } else if (temp <= 40) {
+        tempElement.classList.add('temp-cold');
+    } else if (temp <= 60) {
+        tempElement.classList.add('temp-cool');
+    } else if (temp <= 70) {
+        tempElement.classList.add('temp-mild');
+    } else if (temp <= 80) {
+        tempElement.classList.add('temp-warm');
+    } else if (temp <= 90) {
+        tempElement.classList.add('temp-hot');
+    } else {
+        tempElement.classList.add('temp-very-hot');
+    }
 }
 
 // Country API Functions
@@ -124,7 +156,7 @@ function displayCountryData(data) {
     document.getElementById('country-flag').alt = `Flag of ${data.name.common}`;
     
     countryLoading.style.display = 'none';
-    countryContent.style.display = 'block';
+    countryContent.style.display = 'flex';
 }
 
 // Geolocation Functions (Bonus Feature)
