@@ -2,7 +2,7 @@
 
 ## Project Description:
 
-A dynamic web application that displays real-time weather information and country data for Troy, NY, with support for geolocation-based weather updates. This project demonstrates the integration of multiple REST APIs to create an interactive, data-driven web experience with visual feedback through dynamic color-changing temperature displays.
+A dynamic web application that displays real-time weather information and country data for Troy, NY, with support for geolocation-based weather updates. This project demonstrates the integration of multiple REST APIs using AJAX techniques to create an interactive, data-driven web experience with visual feedback through dynamic color-changing temperature displays. The application uses asynchronous JavaScript to fetch and display data without requiring page refreshes.
 
 ## Features:
 
@@ -56,7 +56,7 @@ A dynamic web application that displays real-time weather information and countr
 
 ## Temperature Color Feature:
 
-The application includes a visual temperature indicator that changes the color of the temperature display based on the current temperature reading. This provides an intuitive, at-a-glance understanding of the weather conditions.
+The application includes a visual temperature indicator that changes the color of the temperature display based on the current temperature reading. This provides an intuitive understanding of the weather conditions.
 
 ### Temperature Color Scale:
 
@@ -77,15 +77,30 @@ The application includes a bonus geolocation feature that allows users to:
 - Automatically update country information based on detected location
 - Receive clear feedback about the location detection process
 
+**How it works**:
+1. Click the "🌍 Get Weather for My Location" button
+2. Grant location permission when prompted by your browser
+3. The app retrieves your coordinates and fetches weather data
+4. Both weather and country information update to reflect your location
+
 ## File Structure:
 
 ```
-lab3/
+project/
 ├── index.html              # Main HTML structure
 ├── resources/
 │   ├── ajax-api.js        # JavaScript for API calls and functionality
 │   └── style.css          # Styling and responsive design
 ```
+
+## Technologies Used:
+
+- **HTML5**: Semantic markup and structure
+- **CSS3**: Styling, animations, and responsive design
+- **JavaScript**: Async/await for API calls, DOM manipulation
+- **AJAX (Asynchronous JavaScript and XML)**: Implemented using the Fetch API to make asynchronous HTTP requests to external APIs without page reloads
+- **Fetch API**: Modern AJAX technique for making HTTP requests to OpenWeatherMap and REST Countries APIs
+- **Geolocation API**: Browser-based location detection
 
 ## Error Handling:
 
