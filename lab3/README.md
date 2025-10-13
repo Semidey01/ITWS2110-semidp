@@ -1,4 +1,4 @@
-# Weather & Location Dashboard
+# Lab 3 - JavaScript, AJAX, JSON, using APIs
 
 ## Project Description:
 
