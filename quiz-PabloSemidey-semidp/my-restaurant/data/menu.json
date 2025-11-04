@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Margherita Pizza",
+        "description": "Classic Italian pizza with fresh mozzarella and basil",
+        "category": "vegetarian",
+        "cuisine": "Italian",
+        "imageUrl": "resources/img/pizza.webp",
+        "ingredients": ["Flour", "Tomato", "Mozzarella", "Basil", "Olive Oil"],
+        "price": 12.99
+    },
+    {
+        "id": 2,
+        "name": "Chicken Tikka Masala",
+        "description": "Tender chicken in a creamy spiced tomato sauce",
+        "category": "non-vegetarian",
+        "cuisine": "Indian",
+        "imageUrl": "resources/img/Chicken-Tikka-Masala_0-SQ.webp",
+        "ingredients": ["Chicken", "Yogurt", "Tomato", "Cream", "Spices"],
+        "price": 14.99
+    },
+    {
+        "id": 3,
+        "name": "Vegetable Stir Fry",
+        "description": "Fresh mixed vegetables with ginger and soy sauce",
+        "category": "vegan",
+        "cuisine": "Chinese",
+        "imageUrl": "resources/img/VegetableStirFry_9.jpg",
+        "ingredients": ["Broccoli", "Bell Peppers", "Carrots", "Ginger", "Soy Sauce"],
+        "price": 11.99
+    },
+    {
+        "id": 4,
+        "name": "Beef Tacos",
+        "description": "Seasoned ground beef with lettuce, cheese, and salsa",
+        "category": "non-vegetarian",
+        "cuisine": "Mexican",
+        "imageUrl": "resources/img/Beef-tacos.webp",
+        "ingredients": ["Beef", "Tortillas", "Lettuce", "Cheese", "Salsa"],
+        "price": 10.99
+    }
+]
