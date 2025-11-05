@@ -184,6 +184,8 @@ class Division extends Operation {
 - getEquation() calls operate() and displays the result.
 
 - Any exceptions are caught and displayed as error messages.
+  </div>
+  <div>
 
 ### 2 - How would the application differ if we used $_GET instead of $_POST?
 
@@ -196,7 +198,8 @@ Using $_GET:
 - This would allow bookmarking or sharing specific calculations.
 
 However, it is less secure and not ideal for sensitive or changing data. $_POST is preferred here because it keeps the input hidden and represents a data-processing action more accurately.
-
+  </div>
+  <div>
 ### 3 - Finally, please explain whether or not there might be another (better +/-) way to determine which button has been pressed and take the appropriate action
 
 Another way we can determine what button was pressed is instead of checking multiple isset($_POST['add']), isset($_POST['subtract']), etc., you can give all buttons the same name (e.g., name="operation") but different values (e.g., value="add", value="divide"). Then you only need to check one variable like: $opType = $_POST['operation']; and use a switch or match statement to create the correct object.
