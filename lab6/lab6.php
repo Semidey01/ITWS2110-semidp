@@ -160,7 +160,7 @@ class Division extends Operation {
   </form>
 
   <div><h4>1- What does each class and method do, and what is the flow of execution after a button is clicked?</h4>
-    <ul>
+
 - Operation: Abstract base class that validates input and defines the required structure for operations.
 
 - Addition, Subtraction, Multiplication, Division: Implement their respective arithmetic logic in operate() and return a formatted string in getEquation().
@@ -168,9 +168,8 @@ class Division extends Operation {
 - operate(): Executes the actual math.
 
 - getEquation(): Returns a readable equation with the result.
-  </ul>
 
-### Flow of Execution:
+<h5>Flow of Execution:</h5>
 
 - The user inputs two values and clicks a button.
 
