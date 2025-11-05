@@ -1,4 +1,4 @@
-# Lab 4 - PHP, OOP and Input Handling
+# Lab 6 - PHP, OOP and Input Handling
 
 ## Lab Description:
 
