@@ -159,7 +159,7 @@ class Division extends Operation {
     <input type="submit" name="div" value="Divide" />  
   </form>
 
-  <div>### 1- What does each class and method do, and what is the flow of execution after a button is clicked?
+  <div><h4>1- What does each class and method do, and what is the flow of execution after a button is clicked?</h4>
 
 - Operation: Abstract base class that validates input and defines the required structure for operations.
 
@@ -187,7 +187,7 @@ class Division extends Operation {
   </div>
   <div>
 
-### 2 - How would the application differ if we used $_GET instead of $_POST?
+<h4> 2 - How would the application differ if we used $_GET instead of $_POST? </h4>
 
 Using $_GET:
 
@@ -200,7 +200,7 @@ Using $_GET:
 However, it is less secure and not ideal for sensitive or changing data. $_POST is preferred here because it keeps the input hidden and represents a data-processing action more accurately.
   </div>
   <div>
-### 3 - Finally, please explain whether or not there might be another (better +/-) way to determine which button has been pressed and take the appropriate action
+<h4> 3 - Finally, please explain whether or not there might be another (better +/-) way to determine which button has been pressed and take the appropriate action </h4>
 
 Another way we can determine what button was pressed is instead of checking multiple isset($_POST['add']), isset($_POST['subtract']), etc., you can give all buttons the same name (e.g., name="operation") but different values (e.g., value="add", value="divide"). Then you only need to check one variable like: $opType = $_POST['operation']; and use a switch or match statement to create the correct object.
 This approach makes it easier to maintain the code if new operations are added later.
